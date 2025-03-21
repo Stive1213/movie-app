@@ -1,23 +1,82 @@
-/* App.css */
-
 .App {
+  min-height: 100vh;
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
-  font-size: 22px;
+  padding: 20px;
+  color: #ffffff;
 }
 
 .search-box {
-  height: 10vh;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.search-box>input,
-button {
-  box-sizing: border-box;
-  height: 25px;
-  font-size: 20px;
+.search-box label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #404040;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  background-color: #4d4d4d;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 0.5);
+}
+
+.search-box button {
+  padding: 8px 20px;
+  background-color: #e50914;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #ff1a25;
+}
+
+/* Responsive video player */
+.react-player {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
 }
