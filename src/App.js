@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import { useState } from 'react';
+import ReactPlayer from 'react-player';
+import movieTrailer from 'movie-trailer';
+function App(){
+const [video, setVideo] = useState("inception");
+const [videoUrl, setVideoUrl] = useState("https://youtu.be/sa9l-dTv9Gk");
+
+function handleSearch(){
+  movieTrailer(video).then((res) => {
+    setVideoUrl(res);
+  });
 }
 
-export default App;
+
+}
+export default App
