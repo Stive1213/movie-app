@@ -13,6 +13,19 @@ function handleSearch(){
   });
 }
 
+return (
+  <div className="App">
+    <div className='search-box'>
+      <label>
+        search for any movies/shows:{" "}
+      </label>
+      <input type='text' onChange={(e) => { setVideo(e.target.value)}}>
+      </input>
+      <button onClick={handleSearch()}>Search</button>
+    </div>
+    <ReactPlayer url={videoUrl} controls={true} />
+  </div>
+);
 
 }
 export default App
